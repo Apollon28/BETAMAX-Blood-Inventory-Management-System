@@ -1,0 +1,18 @@
+In PHPMyAdmin, create a database named blood_management_system and a table named blood_stock with the following structure:
+
+CREATE TABLE blood_stock (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    blood_type VARCHAR(5) NOT NULL,
+    stock INT NOT NULL
+);
+
+Insert initial data into the blood_stock table:
+INSERT INTO blood_stock (blood_type, stock) VALUES
+('A+', 10),
+('A-', 8),
+('B+', 6),
+('B-', 5),
+('O+', 12),
+('O-', 9),
+('AB+', 7),
+('AB-', 4);

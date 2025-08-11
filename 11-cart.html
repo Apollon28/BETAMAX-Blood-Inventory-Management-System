@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Betamax: Blood Management System</title>
+    <link rel="stylesheet" href="dash.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="left">
+                    <a href="4-dash.html">
+                    <img src="logo_notext.png" alt="logo" height="65px" width="65px">
+                    </a>
+                </div>
+                <div class="center">
+                    <a href="4-dash.html">
+                    <img src="textlogo.png" alt="logo" height="80px"> 
+                </a>
+                </div>
+                <div class="right">
+                    <a href="14-profile.html">
+                        <img src="profile.png" alt="logo" height="40px" width="40px">
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="content-container">
+            <section id="faqs">
+                <h2><a href="13-faqs.html">FAQs</a></h2>
+            </section>
+            <div class="right-content">
+                <section id="donate">
+                    <h2><a href="5-donate.html">DONATE</a></h2>
+                </section>
+                <section id="request">
+                    <h2><a href="10-request.html">REQUEST</a></h2>
+                </section>
+            </div>
+        </div>
+    </main>
+    <div class="flex-container">
+        <div class="left-side">
+            <img src="blood-inventory.png" alt="Blood Inventory" height="60px" width="500px">
+        </div>
+        <div class="right-side">
+            <img src="cart.png" alt="Cart" height="30px" width="30px">
+        </div>
+    </div>
+
+    <div class="yourcart">
+        <section class="y-cart">
+            <h3>YOUR CART</h3>
+        </section>
+    </div>
+
+    <div class="order-container">
+        <div class="qty">
+            <section class="quantity">
+                <h2>Quantity</h2>
+                <div class="quantity-input">
+                    <button id="decrement">-</button>
+                    <input type="number" id="quantityInput" name="quantity" min="1" max="100" value="1">
+                    <button id="increment">+</button>
+                </div>
+            </section>
+        </div>
+        <div class="item">
+            <section class="order">
+                <h2>Order</h2>
+            </section>
+        </div>
+    </div>
+
+    <div class="total">
+        <section class="ttl">
+            <h3>TOTAL UNITS</h3>
+        </section>
+    </div>
+
+    <div class="proceed">
+        <section class="button-total">
+            <a href="12-requestform.html">
+            <button id="proceedButton">Proceed to Request</button>
+            </a>
+        </section>
+    </div>
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+    const decrementButton = document.getElementById('decrement');
+    const incrementButton = document.getElementById('increment');
+    const quantityInput = document.getElementById('quantityInput');
+
+    decrementButton.addEventListener('click', function() {
+        let currentValue = parseInt(quantityInput.value) || 0;
+        if (currentValue > 1) {
+            quantityInput.value = currentValue - 1;
+        }
+    });
+
+    incrementButton.addEventListener('click', function() {
+        let currentValue = parseInt(quantityInput.value) || 0;
+        if (currentValue < parseInt(quantityInput.max)) {
+            quantityInput.value = currentValue + 1;
+        }
+    });
+});
+</script>
+
+
+</body>
+</html>

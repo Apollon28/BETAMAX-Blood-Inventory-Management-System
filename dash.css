@@ -1,0 +1,529 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal; 
+}
+
+header {
+    background-color: #ffffff;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #bf1b2c; 
+}
+
+.nav-container {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    height: 60px;
+    padding: 0 20px; 
+}
+
+.left, .center, .right {
+    flex: 1; 
+}
+
+.center {
+    display: flex;
+    justify-content: center; 
+}
+
+.right {
+    display: flex;
+    justify-content: flex-end; 
+}
+
+main {
+    margin-top: 45px;
+    padding: 20px;
+}
+
+section {
+    padding: 20px 0;
+}
+
+section h2 {
+    margin-top: 0;
+    font-weight: normal;
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    color: #bf1b2c;
+    font-size: 12px;
+    margin-left: 80px;
+    
+}
+
+.right-content {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px; 
+    margin-right: 80px;
+}
+
+a {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+a:hover {
+    color: #2056ae; 
+}
+
+.clock-container {
+    text-align: center;
+}
+
+#clock {
+    font-size: 48px;
+    margin-bottom: 8px;
+    color:#bf1b2c;
+}
+
+#date {
+    font-size: 20px;
+    color:#bf1b2c;
+}
+
+#image-container {
+    margin-top: 30px;
+}
+
+.faqs-container {
+    width: 100%; 
+    max-width: 100%;
+    height: 500px; 
+    overflow: hidden;
+
+}
+
+.faqs-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.questions {
+    margin: 50px;
+    color:#bf1b2c;
+}
+
+.questions h3 {
+    font-size: 25px;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-top: -75px;
+}
+
+.left-side img {
+    margin-left: 69px;
+}
+
+.right-side img {
+    margin-right: 79px;
+}
+
+.product-container-upper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 100px;
+    margin-top: -50px;
+    color: #BF1B2C;
+}
+
+
+.product-container-upper > div {
+    flex: 1;
+    text-align: center; 
+}
+
+.product-container-lower {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+    color: #BF1B2C;
+}
+
+.product-container-lower > div {
+    flex: 1;
+    text-align: center; 
+}
+
+.product-container-upper img,
+.product-container-lower img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: none; 
+    padding: 0; 
+    outline: none; 
+}
+
+.product-container-upper img:hover, 
+.product-container-lower img:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+}
+
+/* Remove hover effect for add-to-cart.png */
+.stock-info img {
+    transition: none;
+    box-shadow: none;
+}
+
+.stock-info img:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.stock-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.stock-info h4 {
+    margin-left: 25%;
+    padding-right: 10px;
+    color: #BF1B2C;
+    font-weight: lighter;
+}
+
+
+.yourcart {
+    margin-left: 100px;
+    color: #bf1b2c;
+    font-size: 25px;
+}
+
+.y-cart {
+    margin-top: -50px; 
+}
+
+.order-container {
+    display: flex;
+    justify-content: space-between; /* Adjust as needed */
+    align-items: center; /* Align items vertically */
+    width: 80%; /* Example width */
+    margin: auto; /* Center horizontally */
+    color: #bf1b2c;
+    margin-top: -30px;
+    font-size: 15px;
+}
+
+.qty, .item {
+    flex: 1; /* Equal width for both sections */
+    text-align: center; /* Center the content horizontally */
+}
+
+.quantity, .order {
+    padding: 10px; /* Example padding for sections */
+}
+
+.quantity {
+    padding: 10px;
+}
+
+.quantity-input {
+    display: flex;
+    align-items: center;
+    margin-left: 250px;
+}
+
+.quantity-input button {
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.quantity-input button:hover {
+    background-color: #bf1b2c;
+}
+
+#quantityInput {
+    width: 50px;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.total {
+    font-size: 20px;
+    color: #bf1b2c;
+    padding-top: 150px;
+    margin-left: 93px;
+}
+
+.button-total button {
+    padding: 10px 20px; /* Adjust padding */
+    border: none;
+    border-radius: 20px;
+    background-color: #bf1b2c;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 85%;
+    margin-top: 40px;
+}
+    
+.button-total button:hover {
+    background-color: #2056ae;
+}
+
+.rq-form {
+    color:#bf1b2c;
+    margin-left: 6.5%;
+    margin-top: -4%;
+    font-size: 20px;
+}
+
+input[type="date"]::placeholder {
+    color: #999;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.form-group {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    text-align: right; /* Ensures the button is aligned to the right */
+    padding: 5px; /* Optional: Add padding to the container for spacing *//* Ensures the button is aligned to the right */
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+h2 {
+    color: #BF1B2C;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 0;
+}
+
+table {
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: 2px solid #BF1B2C; /* Set border color of the table */
+    
+}
+
+th{
+    font-family: 'Montserrat', sans-serif;
+    border: 1px solid #BF1B2C; /* Set border color of table cells */
+    padding: 10px;
+    text-align: left;
+    border-color: none;
+}
+button {
+    background-color: #BF1B2C;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    float: right; 
+    border-radius: 20px;
+}
+
+button:hover {
+    background-color: darkred;
+}
+th {
+    color: #BF1B2C;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f2f2f2;
+}
+
+.instruction {
+    color: #BF1B2C;
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+
+.radio-container , .border-me {
+    display: flex;
+    
+    align-items: center;
+    border-top: 1px solid red;
+}
+
+.hiv label {
+    color: #BF1B2C;
+    font-family: 'Montserrat', sans-serif;
+    margin-right: 10px;
+    border-color: none;
+}
+.radio-container label {
+    color: #BF1B2C;
+    font-family: 'Montserrat', sans-serif;
+    margin-right: 10px;
+    border-color: none;
+}
+
+.form-group {
+    color: #BF1B2C;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 20px;
+    position: relative;
+}
+h2-screening{
+    font-size: 30px;
+    font-weight: 800 ;
+    color: #BF1B2C;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-group5 :hover{
+    background-color: rgb(185, 165, 165);
+}
+.form-group5 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.form-group5 input {
+    width: calc(40% + 20px); /* Adjust width to fit within the header frame padding */
+    padding: 10px;
+    box-sizing: border-box;
+    border: 2px solid #BF1B2C; 
+    border-radius: 30px; 
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.form-group5 input::placeholder {
+    color: #BF1B2C;
+    font-size: 16px;
+}
+
+h2-ticketing{
+    font-size: 30px;
+    font-weight: 800;
+    color: #BF1B2C;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2-profile{
+    font-size: 15px;
+    font-weight: 800;
+    color: #BF1B2C;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 50px;
+    display: flex;
+}
+    
+    .info-container {
+        border: 2px solid #BF1B2C; 
+        padding: 20px;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        flex-direction: column; 
+        width: 300px; 
+    }
+    
+    .profile-image {
+        margin-right: 20px; 
+    }
+    
+    .profile-image img {
+        width: 260px; 
+        border-radius: 20%; 
+    }
+    
+    .profile-info {
+        text-align: center;
+        position: center;
+        display: flex;
+        flex-direction: column; 
+    }
+    
+    .info-item {
+        margin-bottom: 10px; 
+        position: center;
+    }
+    
+    .info-label {
+        position: center;
+        color: #BF1B2C;
+       
+    }
+    
+    .info-value {
+        font-size: 30px;
+        position: left;
+        margin-top: 5px; 
+        color: #BF1B2C;
+    }
+    
+    .profile-container {
+        margin-left: 400px;
+        padding: 20px;
+        display: flex;
+        flex-direction:column;
+        position: absolute; /* or absolute, depending on your layout */
+        top: 160px;
+        z-index: 2; /* Ensure container2 is above container1 */
+
+    }
+    h2-profile1{
+        font-size: 30px;
+        font-weight: 800;
+        color: #BF1B2C;
+        font-family: 'Montserrat', sans-serif;
+        
+        display: flex;
+    }
